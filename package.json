@@ -1,0 +1,19 @@
+{
+  "name": "git-timesheet",
+  "version": "0.0.1",
+  "description": "Reads a git repository commits and spits out a timesheet-like report.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xc14m1z/git-timesheet.git"
+  },
+  "author": "0xc14m1z <0xc14m1z@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0xc14m1z/git-timesheet/issues"
+  },
+  "homepage": "https://github.com/0xc14m1z/git-timesheet#readme"
+}
