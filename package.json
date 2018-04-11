@@ -19,6 +19,7 @@
   "dependencies": {
     "moment": "^2.22.0",
     "popipe": "^1.1.0",
+    "ramda": "^0.25.0",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
