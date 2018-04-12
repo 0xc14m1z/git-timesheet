@@ -20,7 +20,7 @@ describe("Filters", () => {
         { date: "2018-03-15", hour: "16", author: "third@user.com" }
       ]
 
-      const result = Filters.by(authors, commits)
+      const result = Filters.by(authors)(commits)
       expect(result).to.deep.equal(expectation)
     })
 
@@ -40,7 +40,7 @@ describe("Filters", () => {
         { date: "2018-03-15", hour: "16", author: "third@user.com" }
       ]
 
-      const result = Filters.from("2018-01-01", commits)
+      const result = Filters.from("2018-01-01")(commits)
       expect(result).to.deep.equal(expectation)
     })
 
@@ -59,7 +59,7 @@ describe("Filters", () => {
         { date: "2017-02-23", hour: "17", author: "second@user.com" }
       ]
 
-      const result = Filters.to("2017-12-31", commits)
+      const result = Filters.to("2017-12-31")(commits)
       expect(result).to.deep.equal(expectation)
     })
 
