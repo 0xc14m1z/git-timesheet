@@ -15,7 +15,7 @@ describe("Commit", () => {
     const author = "first@user.com"
 
     const expectation =
-      { year: "2018", month: "01", day: "08", hour: "16", minute: "44", second: "24", author: "first@user.com" }
+      { date: "2018-01-08", hour: "16", author: "first@user.com" }
 
     const result = Commit(rawDate, author)
     expect(result).to.deep.equal(expectation)
