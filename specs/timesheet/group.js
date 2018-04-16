@@ -1,13 +1,13 @@
 const expect = require("chai").expect
 const rewire = require("rewire")
 
-const currentModule = rewire("../../lib/timesheet/group")
+const group = require("../../lib/timesheet/group")
+const groupByDate = require("../../lib/timesheet/group/groupByDate")
+const groupByHour = require("../../lib/timesheet/group/groupByHour")
 
 describe("Timesheet", () => {
 
   describe("groupByDate", () => {
-
-    const groupByDate = currentModule.__get__("groupByDate")
 
     it("should return an empty object if no commits are given", () => {
       const commits = []
@@ -70,8 +70,6 @@ describe("Timesheet", () => {
   })
 
   describe("groupByHour", () => {
-
-    const groupByHour = currentModule.__get__("groupByHour")
 
     it("should return an empty object if no commits are given", () => {
       const commits = []
@@ -165,8 +163,6 @@ describe("Timesheet", () => {
   })
 
   describe("group", () => {
-
-    const group = currentModule.__get__("group")
 
     it("should group commits by date and hour", () => {
       const commits = [
