@@ -1,5 +1,4 @@
 const expect = require("chai").expect
-const rewire = require("rewire")
 
 const group = require("../../lib/timesheet/group")
 const groupByDate = require("../../lib/timesheet/group/groupByDate")
