@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Reads a git repository commits and spits out a timesheet-like report.",
   "main": "index.js",
+  "bin": {
+    "git-timesheet": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "NODE_ENV=test mocha specs/*.js specs/**/*.js"
