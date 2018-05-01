@@ -10,20 +10,18 @@ if ( !Git.isInstalled() ) {
   process.exit(1)
 }
 
-const { authors, from, to, continuity, prestart } = Options.parse(yargs).argv
-// console.log("authors: ", authors)
-// console.log("from: ", from)
-// console.log("to: ", to)
-// console.log("continuity: ", continuity)
-// console.log("prestart: ", prestart)
+const { authors, from, to, continuity, prestart, outputFile } =
+  Options.parse(yargs).argv
 
 const timesheet = Timesheet.compute(authors, from, to, continuity, prestart)
-// console.log(timesheet)
 
-const graph = Graph.draw(timesheet)
+const graph = Graph.draw(timesheet, {
+  repository: Git.repository(),
+  branch: Git.currentBranch(),
+  authors
+})
 
-const desktop = require('path').join(require('os').homedir(), 'Desktop')
-
-Graph.save(graph[0], desktop + "/graph.png")
-
-console.log("Saved!")
+Graph.save(graph, outputFile, () => {
+  console.log(`Timesheet exported at: ${outputFile}`)
+  process.exit(0)
+})
