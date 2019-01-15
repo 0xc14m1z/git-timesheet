@@ -1,6 +1,6 @@
 {
   "name": "git-timesheet",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Reads a git repository commits and spits out a timesheet-like report.",
   "main": "index.js",
   "bin": {
