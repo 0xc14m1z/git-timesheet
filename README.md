@@ -28,3 +28,8 @@ Options:
                     worked                                          [default: 1]
   --outputFile, -o  Path of the output file         [default: "./timesheet.pdf"]
 ```
+
+
+## sample page output
+
+![sample page output](https://github.com/0xc14m1z/git-timesheet/blob/master/sample-page-output.png)
